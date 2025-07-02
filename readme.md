@@ -22,6 +22,9 @@ A modern, responsive ReactJS application that showcases products from the Fake S
 ## 🖼️ Screenshots
 
 ![Product Page](./src/assets/screenshots/product-page.png)
+
+---
+
 ![Cart Modal](./src/assets/screenshots/cart-page.png)
 
 ---
@@ -48,7 +51,7 @@ A modern, responsive ReactJS application that showcases products from the Fake S
    ```bash
    git clone git@github.com:CodeRamana/Shopping-cart.git
    cd Shopping-cart
-   
+
 ---
 ### 🙌 Credits
 
