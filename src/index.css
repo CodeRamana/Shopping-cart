@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size:62.5% ;
+}
+
+:root{
+  --primary-base:#3b5bdb;
+  --primary-tint:#dbe4ff;
+  --grey:#495057;
+  --white:#FFF;
+  --black:#000;
+
+  --font-weight-bolder:800;
+  --font-weight-bold:600;
+  --font-weight-normal:400;
+
+  --font-style:italic;
+
+  --font-family:'poppins';
+
+  --text-xs:1.6rem;
+  --text-sm:2rem;
+  --text-md:2.4rem;
+  --text-lg:3.2rem;
+  --text-xl:4rem;
+
+  --line-height-normal:1.2;
+  --line-height-large:1.5;
+
+  --letter-tight:-3px;
+}
+
+body{
+  font-family: var(--font-family);
+  font-size: var(--text-xs);
+  line-height: var(--line-height-large);
+  letter-spacing:0.5px;
+  font-weight: var(--font-weight-normal);
+}
