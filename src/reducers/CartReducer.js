@@ -21,7 +21,6 @@
                 } 
             case "REDUCECOUNT":
                 const existingItem = state.cartItems.find(item => item.id === action.payload.id);
-                console.log((existingItem.qty === action.payload.qty) ? state['totalCartItems'] :state['totalCartItems'] - 1)
                 return {
                         ...state,
                         totalCartItems:(state['totalCartItems'] === 0) ? 0 :((existingItem.qty === action.payload.qty) ? state['totalCartItems'] :state['totalCartItems'] - 1),
