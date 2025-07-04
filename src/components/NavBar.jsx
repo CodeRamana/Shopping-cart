@@ -1,10 +1,13 @@
-const NavBar = ({ cart, setOpenModel }) => {
+import { useNavigate } from "react-router";
+
+const NavBar = ({ cart }) => {
+    const navigate = useNavigate()
     return (
         <header>
             <nav>
-                <p className="logo">ShopSmart</p>
+                <p className="logo" onClick={() => navigate('/')}>ShopSmart</p>
                 <div className="nav-right">
-                    <button className="btn" onClick={() => setOpenModel(cart.totalCartItems > 0 ? true : false)}><span className="material-symbols-outlined">
+                    <button className="btn" onClick={(cart['totalCartItems'] !== 0)?() => navigate('/carts'):null}><span className="material-symbols-outlined">
                         shopping_cart
                     </span></button>
                     {(cart['totalCartItems'] !== 0) && <p className="count">{cart.totalCartItems}</p>}

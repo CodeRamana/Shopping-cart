@@ -1,15 +1,16 @@
 
 
 const ProductCard = ({ product, cartDispatch, cart }) => {
-    const handleCart = (item) => {
 
-        if (!cart['cartItems'].find((product) => product.id === item.id)) {
-            cartDispatch({ type: "ADD", payload: item })
+    const handleCart = (item) => {
+        const result = cart['cartItems'].find((product) => product.id === item.id)
+        if (!result) {
+            cartDispatch({ type: "ADD", payload: {...item,qty:1} })
         }
         else {
-            alert("This Product is Already Added to the Cart")
+            const updated = {...result,qty:(result.qty < 0 ? 0 : result.qty += 1 )}
+            cartDispatch({ type: "ADDCOUNT", payload: {...updated} })
         }
-
     }
 
     return (
